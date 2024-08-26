@@ -2,5 +2,5 @@ package com.patika.paymentservice.model.enums;
 
 public enum PaymentType {
     CREDIT,
-    EFT
+    CREDIT_CARD, EFT
 }

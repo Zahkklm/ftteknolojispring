@@ -4,5 +4,5 @@ public enum StatusType {
 
     WAITING_APPROVAL,
     APPROVED,
-    IN_ACTIVE
+    ACTIVE, IN_ACTIVE
 }
