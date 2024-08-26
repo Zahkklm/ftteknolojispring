@@ -1,0 +1,35 @@
+spring:
+  application:
+    name: gateway
+  cloud:
+    gateway:
+      routes:
+        - id: notification-service
+          uri: lb://NOTIFICATION-SERVICE
+          predicates:
+            - Path=/api/v1/notifications/**
+        - id: user-auth-service
+          uri: lb://USER-AUTH-SERVICE
+          predicates:
+            - Path=/api/v1/users/**
+        - id: user-auth-service
+          uri: lb://USER-AUTH-SERVICE
+          predicates:
+            - Path=/api/v1/auth/**
+        - id: booking-service
+          uri: lb://BOOKING-SERVICE
+          predicates:
+            - Path=/api/v1/bookings/**
+        - id: travel-service
+          uri: lb://TRAVEL-SERVICE
+          predicates:
+            - Path=/api/v1/travels/**
+        - id: payment-service
+          uri: lb://PAYMENT-SERVICE
+          predicates:
+            - Path=/api/v1/payments/**
+
+server:
+  port: 9090
+
+
