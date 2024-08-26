@@ -1,1 +1,1 @@
-!(BiletApp.png)
+!(/BiletApp.png)
