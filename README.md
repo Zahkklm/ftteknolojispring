@@ -1,5 +1,5 @@
 
-![Diagram](BiletApp.png)
+![Diagram](BiletAppDiagram.svg)
 
 ## 1.
 Open a command prompt at the root location of project:

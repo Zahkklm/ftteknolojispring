@@ -5,16 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="630338e7-9e32-4bd9-a34b-ae39d3d8cf64" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/BiletAppDiagram.svg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/booking-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/booking-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/booking-service/src/main/java/com/patika/bookingservice/BookingServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/booking-service/src/main/java/com/patika/bookingservice/BookingServiceApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gateway/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/gateway/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/notification-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/notification-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/payment-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/payment-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/payment-service/target/test-classes/com/patika/paymentservice/controller/PaymentControllerTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/payment-service/target/test-classes/com/patika/paymentservice/controller/PaymentControllerTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-auth-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/user-auth-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-auth-service/src/main/java/com/patika/gwauthservice/config/SecurityConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-auth-service/src/main/java/com/patika/gwauthservice/config/SecurityConfiguration.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,6 +51,11 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="A:\Projects\biletuygulamasi" />
+    </key>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -67,7 +64,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1724718503351</updated>
-      <workItem from="1724718504458" duration="467000" />
+      <workItem from="1724718504458" duration="805000" />
     </task>
     <servers />
   </component>
