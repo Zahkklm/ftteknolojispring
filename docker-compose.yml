@@ -1,4 +1,95 @@
+version: '3.8'
+
 services:
+  gateway:
+    build:
+      context: ./gateway
+    container_name: gateway-service
+    ports:
+      - "9090:9090"
+    networks:
+      - microservices-network
+    volumes:
+      - ./gateway/application.yml:/app/application.yml
+    environment:
+      - SPRING_PROFILES_ACTIVE=default
+
+  user-auth-service:
+    build:
+      context: ./user-auth-service
+    container_name: user-auth-service
+    ports:
+      - "9088:9088"
+    depends_on:
+      - postgres
+      - rabbitmq
+    networks:
+      - microservices-network
+    volumes:
+      - ./user-auth-service/application.yml:/app/application.yml
+    environment:
+      - SPRING_PROFILES_ACTIVE=default
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://postgres:5432/userdb
+      - SPRING_DATASOURCE_USERNAME=postgres
+      - SPRING_DATASOURCE_PASSWORD=postgrespw
+      - SPRING_RABBITMQ_HOST=rabbitmq
+
+  booking-service:
+    build:
+      context: ./booking-service
+    container_name: booking-service
+    ports:
+      - "8095:8095"
+    depends_on:
+      - postgres
+      - rabbitmq
+    networks:
+      - microservices-network
+    volumes:
+      - ./booking-service/application.yml:/app/application.yml
+    environment:
+      - SPRING_PROFILES_ACTIVE=default
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://postgres:5432/userdb
+      - SPRING_DATASOURCE_USERNAME=postgres
+      - SPRING_DATASOURCE_PASSWORD=postgrespw
+      - SPRING_RABBITMQ_HOST=rabbitmq
+
+  payment-service:
+    build:
+      context: ./payment-service
+    container_name: payment-service
+    ports:
+      - "8086:8086"
+    depends_on:
+      - postgres
+      - rabbitmq
+    networks:
+      - microservices-network
+    volumes:
+      - ./payment-service/application.yml:/app/application.yml
+    environment:
+      - SPRING_PROFILES_ACTIVE=default
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://postgres:5432/userdb
+      - SPRING_DATASOURCE_USERNAME=postgres
+      - SPRING_DATASOURCE_PASSWORD=postgrespw
+      - SPRING_RABBITMQ_HOST=rabbitmq
+
+  notification-service:
+    build:
+      context: ./notification-service
+    container_name: notification-service
+    ports:
+      - "8089:8089"
+    depends_on:
+      - rabbitmq
+    networks:
+      - microservices-network
+    volumes:
+      - ./notification-service/application.yml:/app/application.yml
+    environment:
+      - SPRING_PROFILES_ACTIVE=default
+      - SPRING_RABBITMQ_HOST=rabbitmq
+
   postgres:
     image: postgres:15
     container_name: postgres
@@ -10,24 +101,34 @@ services:
       - pgdata:/var/lib/postgresql/data
     ports:
       - "55000:5432"
+    networks:
+      - microservices-network
 
   pgadmin:
     image: dpage/pgadmin4:latest
     container_name: pgadmin
     environment:
-      PGADMIN_DEFAULT_EMAIL: admin
+      PGADMIN_DEFAULT_EMAIL: admin@admin.com
       PGADMIN_DEFAULT_PASSWORD: admin
     ports:
       - "8080:80"
     depends_on:
       - postgres
-      
+    networks:
+      - microservices-network
+
   rabbitmq:
     image: rabbitmq:management
-    restart: no
+    container_name: rabbitmq
     ports:
       - "5672:5672"
       - "15672:15672"
+    networks:
+      - microservices-network
 
 volumes:
   pgdata:
+
+networks:
+  microservices-network:
+    driver: bridge

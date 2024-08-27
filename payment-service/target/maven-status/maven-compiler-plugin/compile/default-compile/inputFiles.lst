@@ -1,0 +1,16 @@
+A:\Projects\biletuygulamasi\payment-service\src\main\java\com\patika\paymentservice\controller\PaymentController.java
+A:\Projects\biletuygulamasi\payment-service\src\main\java\com\patika\paymentservice\converter\PaymentConverter.java
+A:\Projects\biletuygulamasi\payment-service\src\main\java\com\patika\paymentservice\dto\request\PaymentRequest.java
+A:\Projects\biletuygulamasi\payment-service\src\main\java\com\patika\paymentservice\dto\response\GenericResponse.java
+A:\Projects\biletuygulamasi\payment-service\src\main\java\com\patika\paymentservice\dto\response\GenericResponseConstants.java
+A:\Projects\biletuygulamasi\payment-service\src\main\java\com\patika\paymentservice\dto\response\PaymentResponse.java
+A:\Projects\biletuygulamasi\payment-service\src\main\java\com\patika\paymentservice\exception\ExceptionMessages.java
+A:\Projects\biletuygulamasi\payment-service\src\main\java\com\patika\paymentservice\exception\GlobalExceptionHandler.java
+A:\Projects\biletuygulamasi\payment-service\src\main\java\com\patika\paymentservice\exception\PaymentException.java
+A:\Projects\biletuygulamasi\payment-service\src\main\java\com\patika\paymentservice\exception\UserException.java
+A:\Projects\biletuygulamasi\payment-service\src\main\java\com\patika\paymentservice\model\enums\PaymentStatus.java
+A:\Projects\biletuygulamasi\payment-service\src\main\java\com\patika\paymentservice\model\enums\PaymentType.java
+A:\Projects\biletuygulamasi\payment-service\src\main\java\com\patika\paymentservice\model\Payment.java
+A:\Projects\biletuygulamasi\payment-service\src\main\java\com\patika\paymentservice\PaymentServiceApplication.java
+A:\Projects\biletuygulamasi\payment-service\src\main\java\com\patika\paymentservice\repository\PaymentRepository.java
+A:\Projects\biletuygulamasi\payment-service\src\main\java\com\patika\paymentservice\service\PaymentService.java

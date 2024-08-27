@@ -1,0 +1,3 @@
+com\patika\paymentservice\controller\PaymentControllerTest.class
+com\patika\paymentservice\PaymentServiceApplicationTests.class
+com\patika\paymentservice\service\PaymentServiceTest.class
