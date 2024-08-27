@@ -1,9 +1,5 @@
-
-![Diagram](BiletApp.png)
-
 ## 1.
 Open a command prompt at the root location of project:
-
 
 ## 2. 
 Run 
@@ -25,6 +21,8 @@ docker-compose up --build
 Run Tests using IntelliJ or Maven `mvn test`
 
 ## Base Project Structure
+
+![Diagram](BiletApp.png)
 
 ```
 biletuygulamasi/
